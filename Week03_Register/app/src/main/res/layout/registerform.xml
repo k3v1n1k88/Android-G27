@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.myapplication.registerform">
+
+    <TextView
+    android:id="@+id/txtViewUserName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="32dp"
+    android:text="Username"
+    android:textSize="20sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="Password"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtViewUserName"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewUserName" />
+
+    <TextView
+        android:id="@+id/txtViewRetype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="Retype"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtViewPassword"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewPassword" />
+
+    <TextView
+        android:id="@+id/txtBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="Birthday"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/txtViewRetype"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewRetype" />
+
+    <EditText
+        android:id="@+id/edtUsename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="Type your username"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:ems="10"
+        android:hint="Type your password"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@+id/txtViewUserName"
+        app:layout_constraintStart_toStartOf="@+id/edtUsename"
+        app:layout_constraintTop_toBottomOf="@+id/edtUsename" />
+
+    <EditText
+        android:id="@+id/edtRetypePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:ems="10"
+        android:hint="Retype your password"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@+id/txtViewPassword"
+        app:layout_constraintStart_toStartOf="@+id/edtPassword"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+
+    <EditText
+        android:id="@+id/edtBirthdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        android:ems="10"
+        android:inputType="date"
+        android:hint="dd/mm/yyyy"
+        android:textSize="20dp"
+        android:focusable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBirthday" />
+
+    <TextView
+        android:id="@+id/txtViewGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Gender"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtBirthdate" />
+
+    <TextView
+        android:id="@+id/txtHobbies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="35dp"
+        android:text="Hobbies"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewGender" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewGender"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center_horizontal">
+        <RadioButton
+            android:id="@+id/rbtnMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Male"
+            app:layout_constraintEnd_toStartOf="@+id/rbtnFemale"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewGender" />
+
+        <RadioButton
+            android:id="@+id/rbtnFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="12dp"
+            android:text="Female"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/rbtnMale"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewGender" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtHobbies"
+        android:gravity="center_horizontal">
+        <CheckBox
+            android:id="@+id/chkboxTennis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Tennis"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHobbies" />
+
+        <CheckBox
+            android:id="@+id/chkboxFutbal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Futbal"
+            app:layout_constraintStart_toEndOf="@+id/chkboxTennis"
+            app:layout_constraintTop_toBottomOf="@+id/txtHobbies" />
+
+        <CheckBox
+            android:id="@+id/chkboxOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:text="Other"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chkboxFutbal"
+            app:layout_constraintTop_toBottomOf="@+id/txtHobbies" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/txtHobbies"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="428dp">
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Reset"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chkboxTennis" />
+
+        <Button
+            android:id="@+id/btnSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="20sp"
+            android:text="Sign-UP"
+            app:layout_constraintStart_toEndOf="@+id/btnReset"
+            app:layout_constraintTop_toBottomOf="@+id/chkboxFutbal" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="8dp"
+        android:text="Select"
+        app:layout_constraintStart_toEndOf="@+id/edtBirthdate"
+        app:layout_constraintTop_toBottomOf="@+id/txtBirthday" />
+
+</android.support.constraint.ConstraintLayout>
